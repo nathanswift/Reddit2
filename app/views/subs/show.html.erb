@@ -1,2 +1,8 @@
-<h1>Subs#show</h1>
-<p>Find me in app/views/subs/show.html.erb</p>
+<h1><%= @sub.name %></h1>
+<hr />
+<p>What would you like to do?</p>
+<%= link_to 'View Topics', sub_topics_path(@sub) %>
+<br />
+<%= link_to 'Edit Sub', edit_sub_path(@sub) %>
+<br />
+<%= link_to 'Delete Sub', @sub, method: :delete %>
